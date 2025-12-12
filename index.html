@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple To-Do List Aplication</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>To-Do List</h1>
+
+        <!--Form Input-->
+        <div class="input-card">
+            <input type="text" id="todo-input" placeholder="Tambahkan Kegiatan...">
+            <input type="date" id="date-input">
+            <button id="add-btn">Tambah</button>
+        </div>
+
+        <!--Pesan Error-->
+        <p id="error-msg" class="error-text"></p>
+
+        <!--Filter-->
+        <div class="filter-group">
+            <select id="filter">
+                <option value="all">Semua</option>
+                <option value="today">Hari Ini</option>
+                <option value="date">Berdasarkan Tanggal</option>
+            </select>
+
+            <input type="date" id="filter-date" style="display:none;">
+        </div>
+
+        <!--Table-->
+        <table id="todo-table">
+            <thead>
+                <tr>
+                    <th>Kegiatan</th>
+                    <th>Tanggal</th>
+                    <th>Aksi</th>
+                </tr>
+            </thead>
+            <tbody id="todo-body">
+                <!--data diisi dari javascript-->
+            </tbody>
+        </table>
+
+        <p id="no-data" style="display:none;">Data Tidak ditemukan</p>
+
+
+    </div>
+
+   <script src="script.js"></script> 
+</body>
+</html>

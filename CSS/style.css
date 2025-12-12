@@ -1,0 +1,239 @@
+body {
+    font-family: "Segoe UI", Arial, sans-serif;
+    background: linear-gradient(135deg, #0a0018, #001433, #180033);
+    background-size: 300% 300%;
+    animation: bgMove 15s ease infinite;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    color: #e8e8e8;
+}
+
+@keyframes bgMove {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+.container {
+    width: 560px;
+    background: rgba(10, 10, 30, 0.65);
+    backdrop-filter: blur(12px);
+    padding: 35px;
+    border-radius: 16px;
+    border: 2px solid rgba(0, 255, 255, 0.25);
+    box-shadow: 
+    0 0 12px rgba(0,0,0,0,1),
+    0 0 50px rgba(170, 0, 255, 0.25);
+}
+
+h1 {
+    text-align: center;
+    font-size: 32px;
+    margin-bottom: 25px;
+    color: #00eaff;
+    text-shadow: 0 0 12px #00eaff;
+    
+}
+
+/* Form */
+.input-card {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 15px;
+}
+
+.input-card input {
+    padding: 12px;
+    border-radius: 8px;
+    width: 100%;
+    border: 1px solid rgba(0, 255, 255, 0.3);
+    background: rgba(0, 0, 20, 0.55);
+    color: #e8e8e8;
+    font-size: 15px;
+    outline: none;
+    transition: 0.3s;
+}
+
+.input-card input:focus {
+    border-color: #00eaff;
+    box-shadow: 0 0 12px #00eaff;
+}
+
+input::placeholder {
+    color: #6ee3ff !important;
+    opacity: 1 !important;
+}
+
+input.error::placeholder {
+    color: #ff7abf !important;
+}
+
+
+#add-btn {
+    padding: 12px 18px;
+    border-radius: 8px;
+    background: #00eaff;
+    border: none;
+    font-weight: 600;
+    color: #00111a;
+    cursor: pointer;
+    box-shadow: 0 0 14px #00eaff;
+    transition: 0.25s;
+}
+
+#add-btn:hover {
+    background: #71f5ff;
+    box-shadow: 0 0 25px #00eaff;
+}
+
+
+input[type="date"]::-webkit-datetime-edit {
+    color: #5ed3ff;
+    opacity: 0.6;
+}
+
+input[type="date"]::-webkit-datetime-edit-text {
+    color: #9cdcff;
+}
+
+input[type="date"]::-webkit-datetime-edit-fields-wrapper {
+    color: #e8e8e8;
+}
+
+input[type="date"]::-webkit-calendar-picker-indicator {
+    filter: invert(80%);
+}
+
+/* error text */
+.error-text {
+    color: #ff3377;
+    font-size: 14px;
+    margin-bottom: 10px;
+    height: 18px;
+    text-shadow: 0 0 8px #ff005d;
+}
+
+/* Filter */
+.filter-group select,
+.filter-group {
+    padding: 12px;
+    width: 100%;
+    margin-top: 10px;
+    border-radius: 8px;
+    border: 1px solid rgba(170, 0, 255, 0.45);
+    background: rgba(10, 0, 20, 0.55);
+    color: #e8e8e8;
+    transition: 0.3s;
+}
+
+.filter-group select:focus,
+.filter-group input:focus {
+    border-color: #bb4fff;
+    box-shadow: 0 0 12px #bb4fff;
+}
+
+
+/* warna tabel */
+#todo-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 30px;
+}
+
+#todo-table thead tr {
+    background: rgba(0, 255, 255, 0.12);
+    backdrop-filter: blur(4px);
+}
+
+
+#todo-table th {
+    padding: 15px;
+    color: #00eaff;
+    font-size: 17px;
+    text-shadow: 0 0 10px #00eaff;
+    border-bottom: 2px solid #00eaff;
+}
+
+
+#todo-table tbody tr td {
+    padding: 14px;
+    text-align: center;
+    background: rgba(255, 255, 255, 0.05);
+    border-bottom: 1px solid rgba(0,255,255,0.18);
+}
+
+#todo-table tbody tr:hover td {
+    background: rgba(0,255,255,0.18);
+    box-shadow: inset 0 0 18px rgba(0,255,255,0.45);
+    transition: 0.25s;
+}
+
+#no-data {
+    margin-top: 15px;
+    color: #ff6dd9;
+    text-align: center;
+    font-size: 16px;
+    text-shadow: 0 0 12px #ff008c;
+}
+
+/* Error Border */
+.error {
+    border: 1px solid #ff005d !important;
+    box-shadow: 0 0 10px #ff005d !important;
+}
+
+
+/* list
+#todo-list {
+    list-style: none;
+    padding: 0;
+}
+
+#todo-list li {
+    background: rgba(255, 255, 255, 0.07);
+    padding: 14px;
+    border-radius: 10px;
+    margin-bottom: 12px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-left: 4px solid #00eaff;
+    transition: 0.25s;
+}
+
+#todo-list li:hover {
+    transform: scale(1.02);
+    box-shadow: 0 0 12px rgba(0, 255, 255, 0.4);
+} */
+
+/* task info
+.task-info span:first-child {
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.task-date {
+    font-size: 12px;
+    color: #555;
+} */
+
+/* delete button
+.delete-btn {
+    background-color: #ff005d;
+    border: none;
+    padding: 6px 12px;
+    border-radius: 6px;
+    color: white;
+    cursor: pointer;
+    font-weight: bold;
+    box-shadow: 0 0 8px #ff005d;
+    transition: 0.25s;
+}
+
+.delete-btn:hover {
+    background-color: #ff4f8a;
+    box-shadow: 0 0 18px #ff0077;
+} */
